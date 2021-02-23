@@ -15,7 +15,7 @@ We're also using [Refit](https://github.com/reactiveui/refit) as an automatic re
 5. [Connecting to VTEX Core Commerce APIs](#connecting-to-vtex-core-commerce-apis)
 
 
-##Getting Started
+## Getting Started
 <a name="getting-started"></a>
 First of all you need an up and running VTEX IO environment, and you can use the toolbelt for that: [Toolbelt Reference](https://developers.vtex.com/vtex-developer-docs/docs/vtex-io-documentation-vtex-io-cli-installation-and-command-reference)
 
@@ -42,7 +42,7 @@ https://sandboxbrdev.myvtex.com/_v/dotnet-example/health
 https://sandboxbrdev.myvtex.com/_v/dotnet-example/taggedProduct/{id}
 09:47:31.322 - info: App running 
 ```
-##Project Structure
+## Project Structure
 
 The `dotnet` folder contains a class library project **DotNetService.csproj** which is responsible for handling the routes and events configured in the `service.json` file.
 
@@ -62,20 +62,18 @@ The project is structured as follows:
 
 Its goal is to be a simplified but well-structured project that may serve as a model to develop IO services using C# and .NET Core frameworks.
 
-##The Manifest and Service Files
+## The Manifest and Service Files
 
 To enable your service you need to change the `manifest.json` file in a few parts:
 - First, we must add `dotnet` to the list of `builders`:
 ```json
 "builders": {
-  ...
   "dotnet": "2.x"
 }
 ```
 - To be able to make outgoing requests, we need to change the `policies` section. In this case, we're enabling access to the catalog api in the VTEX Core Commerce APIs:
 ```json
 "policies": [
-  ...
   {
     "name": "outbound-access",
     "attrs": {
