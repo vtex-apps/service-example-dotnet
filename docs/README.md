@@ -7,7 +7,7 @@ We're also using [Refit](https://github.com/reactiveui/refit) as an automatic re
 
 [NUnit](https://nunit.org) and [Moq](https://github.com/moq/moq) are being used for unit testing.
 
-##Table of Contents
+## Table of Contents
 1. [Getting Started](#getting-started)
 2. [Project Structure](#project-structure)
 3. [The Manifest and Service Files](#the-manifest-and-service-files)
@@ -144,8 +144,7 @@ Task<Product> GetProduct(int productId);
 Adding a refit client is just as simple (use the **StartupExtender** for that):
 
 ```c#
-services.AddRefitClient<IProductRepository>()
-    .ConfigureHttpClient(VtexHttpClient.Configure);
+services.AddRefitClient<IProductRepository>().ConfigureHttpClient(VtexHttpClient.Configure);
 ```
 
 Speaking of which, the `StartupExtender` class is used to build on top of the default Startup process enveloped by the `dotnet` builder. Exceptionally, its namespace must be `Vtex`or it won't work. 
