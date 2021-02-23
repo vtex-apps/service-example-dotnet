@@ -1,0 +1,15 @@
+{
+    "stack": "dotnet",
+    "memory": 256,
+    "timeout": 20,
+    "routes": {
+      "HealthCheck": {
+        "path": "/_v/dotnet-example/health",
+        "public": true
+      },
+      "GetTaggedProduct": {
+        "path": "/_v/dotnet-example/taggedProduct/:id",
+        "public": true
+      }
+    }
+  }

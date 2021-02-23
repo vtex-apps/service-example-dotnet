@@ -1,0 +1,6 @@
+.gitignore
+README.md
+dotnet/obj/
+dotnet/bin/
+yarn.lock
+.vs
